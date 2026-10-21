@@ -1,0 +1,309 @@
+/* --- BASE & TYPOGRAPHIE CLAIRE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fcfcfc; /* Blanc cassé très doux pour les yeux */
+  color: #2c3e50; /* Gris foncé moderne, très lisible */
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.bg-light {
+  background-color: #f4f6f8; /* Gris très clair pour contraster avec le blanc */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  color: #1a252f;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  margin-bottom: 35px;
+  font-size: 0.95rem;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a252f;
+}
+
+.highlight {
+  color: #d4a017; /* Doré chaud */
+}
+
+.nav-links a {
+  color: #4a5568;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #d4a017;
+}
+
+/* --- HERO SECTION (Image avec voile léger) --- */
+.hero {
+  position: relative;
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(26, 37, 47, 0.65); /* Assombrissement léger pour bien lire le texte */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.rating-badge {
+  background-color: #ffffff;
+  color: #d4a017;
+  padding: 5px 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #e2e8f0;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- BOUTONS --- */
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: #d4a017;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(212, 160, 23, 0.3);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-call {
+  background-color: #3182ce;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+/* --- GRILLES DE CARTES (MENU ET GALERIE) --- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}
+
+.menu-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-details {
+  padding: 18px;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.menu-header h3 {
+  font-size: 1rem;
+  color: #1a252f;
+}
+
+.price {
+  color: #d4a017;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background-color: #fff9e6;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.menu-details p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* GALERIE */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.service-box .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-actions {
+  margin-top: 20px;
+}
+
+/* FOOTER ET BOUTON FLOTTANT */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 1.8rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+}
